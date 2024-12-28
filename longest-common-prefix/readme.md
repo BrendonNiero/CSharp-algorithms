@@ -4,10 +4,10 @@ Se não houver um prefixo comum, retorne uma string vazia "".
 
 Exemplo 1:
 
-Entrada: strs = ["flor","fluxo","voo"]
+Entrada: strs = ["flower","flow","flight"]
  Saída: "fl"
 Exemplo 2:
 
-Entrada: strs = ["cachorro","carro de corrida","carro"]
+Entrada: strs = ["dog","racecar","car"]
  Saída: ""
  Explicação: Não há um prefixo comum entre as strings de entrada.
