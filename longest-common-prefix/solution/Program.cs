@@ -1,12 +1,19 @@
 public class Solution {
     public string LongestCommonPrefix(string[] strs) {
-        string startsWith = $"{strs[0][0]}{strs[0][1]}";
-        
-        if(startsWith == $"{strs[1][0]}{strs[1][1]}" 
-        && startsWith == $"{strs[2][0]}{strs[2][1]}"){
-            return startsWith;
-        } else {
+        if(strs.Length == 0)
+        {
             return "";
         }
+        string prefix = strs[0];
+
+        for(int i = 1; i < strs.Length; i++)
+        {
+            while(strs[i].IndexOf(prefix) != 0){
+                prefix = prefix.Substring(0, prefix.Length -1);
+                if(prefix == "")
+                    return "";
+            }
+        }
+        return prefix;
     }
 }
