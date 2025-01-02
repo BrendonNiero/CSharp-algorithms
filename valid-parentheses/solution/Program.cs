@@ -14,8 +14,12 @@ public class Solution {
                 char top = stack.Pop();
 
                 if((c == ')' && top != '(') ||
-                (c == '}' ))
+                (c == '}' && top != '{') ||
+                (c == ']' && top != '[')){
+                    return false;
+                }
             }
         }
+        return stack.Count == 0;
     }
 }
